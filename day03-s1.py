@@ -35,7 +35,7 @@ e = 'hello'
 from math import sqrt
 
 from math import * # RISKY
-
+x
 print(e) """
 
 # Data science
