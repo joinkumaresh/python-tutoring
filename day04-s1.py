@@ -37,9 +37,9 @@ Created on Tue Jul 21 07:55:20 2020
 
 # import random
 # one = two = three = four = five = six =0
-# for i in range(1,100):
+# for i in range(1,10000000):
 #     rand = random.randrange(1,7)
-#     print(rand, end=' ')
+#     #print(rand, end=' ')
 #     if rand == 1:
 #         one += 1
 #     if rand == 2:
@@ -59,11 +59,25 @@ Created on Tue Jul 21 07:55:20 2020
 # print(f" num of 4's is {four}")
 # print(f" num of 5's is {five}")
 # print(f" num of 6's is {six}")     
-# from random import randrange
-# from collections import Counter
-# print(Counter([ random.randrange(1,7) for i in range(10)]))
-# # print (rolls)
-# # print(Counter(rolls))
+from random import randrange
+from collections import Counter
+print(Counter([ random.randrange(1,7) for i in range(10)]))
+
+a = sum(10,20,30)
+print(a)
+# iter pass
+# list
+# add
+
+a = (1,2,3)
+
+
+stu = {'1':1, '2':2}
+
+
+stu.items()
+
+
 
 # l1 = [10, 20]
 # l2 = [30, 40]
@@ -178,11 +192,11 @@ Created on Tue Jul 21 07:55:20 2020
 # for index, value in enumerate(colors):
 #     print(f'{index} : {value}')
 
-num = [19, 3, 15, 7, 11]
-print('bar chart \n')
+# num = [19, 3, 15, 7, 11]
+# print('bar chart \n')
 
-for index, value in enumerate(num):
-    print(f'{index} : {value} : {"*" * value}')
+# for index, value in enumerate(num):
+#     print(f'{index} : {value} : {"*" * value}')
 
 
 

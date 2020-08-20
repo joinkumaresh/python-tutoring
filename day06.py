@@ -57,7 +57,6 @@ num = [3,7,1,4,2,8,5,6]
 # print(num)
 
 
-cube = [ (item, item**3) for item in range(1,6) ]
 
 
 
