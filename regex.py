@@ -62,14 +62,69 @@ import re
 
 
 
-# string = re.findall('123', '123 Main123Stree Street123 123Street 123')
+# string = re.findall('192.168.1.62', '192.168.1.62 Main192.168.1.62Stree Stree192.168.1.62 123Street 192.168.1.62')
 
-# print(string)
+# print(len(string))
 
-regex = r"([a-zA-Z]+) (\d+)"
+# regex = r"([a-zA-Z]+) (\d+)"
     
-match = re.findall(regex, "I was born on June 24") 
-print(match)
+# match = re.findall(regex, "I was born on June 24") 
+# print(match)
+
+# text = 'Kumaresh Devarajan, email: kdev123@gmail.com'
+# pattern = r'([A-Z][a-z]+ [A-Z][a-z]+), email: (\w+@\w+\.\w{3})'
+# result = re.search(pattern, text)
+
+# print(result.groups(1))
+
+
+import pandas as pd
+
+# zips = pd.Series({'Udt' : '642126', 'blr-sjp' : '56003'})
+
+# print(zips.str.match(r'\d{6}'))
+
+# cities = pd.Series({'A':'123A', 'B':'234B'})
+# print(cities.str.contains(r'[A-Z]'))                    
+                    
+# match => looks for a match for the entire string
+# contains => looks for a match for the patternb in the string
+
+
+contacts = [['K Dev', 'kdev123@gmail.com', '1234567890'],
+            ['A Jaya', 'ash@gmail.com', '0987654321']]
+contactsdf = pd.DataFrame(contacts, columns=['Name', 'Email', 'Mobile'])
+print(contactsdf)
+
+def get_formattable_mobile(value):
+    result = re.fullmatch(r'(\d{3}\d{3}\d{4})', value)
+    return '-'.join(result.groups()) if result else value
+
+formatted_phone = contactsdf['Mobile'].map(get_formattable_mobile)
+contactsdf['Mobile'] = formatted_phone
+
+print(contactsdf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
